@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>fr</supported-locale>
+            <supported-locale>am</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>resources.messages</base-name>
+            <var>msg</var>
+        </resource-bundle>
+    </application>
+    <navigation-rule>
+        <navigation-case>
+            <from-outcome>second</from-outcome>
+            <to-view-id>/second.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <managed-bean>
+        <managed-bean-name>MessageBinder</managed-bean-name>
+        <managed-bean-class>com.itsc.Localize</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>Navigator</managed-bean-name>
+        <managed-bean-class>com.itsc.Navigator</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+    <managed-bean>
+        <managed-bean-name>Students</managed-bean-name>
+        <managed-bean-class>com.itsc.StudentData</managed-bean-class>
+        <managed-bean-scope>request</managed-bean-scope>
+    </managed-bean>
+</faces-config>
